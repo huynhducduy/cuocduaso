@@ -15,16 +15,15 @@ RUN /bin/bash -c '. /catkin_ws/devel/setup.bash;'
 WORKDIR /catkin_ws/src
 COPY . .
 
-ENTRYPOINT ["/catkin_ws/src/public1-2019/simulator.x86_64"]
+# ENTRYPOINT ["/catkin_ws/src/public1-2019/simulator.x86_64"]
 
 # apt-get install -y software-properties-common
-# add-apt-repository -y ppa:ubuntu-x-swat/updates
-# apt-get update -y
-# apt-get dist-upgrade -y
-# apt-get update && apt-get -y install libgl1-mesa-glx libgl1-mesa-dri && rm -rf /var/lib/apt/lists/*
+# apt-get update -y && apt-get dist-upgrade -y
+# add-apt-repository -y ppa:ubuntu-x-swat/update
+# add-apt-repository -y ppa:paulo-miguel-dias/pkppa
+# apt-get install -y libgl1-mesa-glx libgl1-mesa-dri llvm-dev libegl1-mesa xserver-xorg-video-intel libglapi-mesa && rm -rf /var/lib/apt/lists/*
+# apt-get update -y && apt-get dist-upgrade -y
 # apt-get install -y mesa-utils
-# add-apt-repository ppa:paulo-miguel-dias/pkppa
-# apt-get update -y
-# sudo apt-get dist-upgrade -y
-# apt-get instal llvm-dev
-# apt-get install libegl1-mesa xserver-xorg-video-intel libgl1-mesa-dri libglapi-mesa
+# apt-get update -y && apt-get dist-upgrade -y
+# api-get upgrade -y
+# LIBGL_DEBUG=verbose glxinfo
